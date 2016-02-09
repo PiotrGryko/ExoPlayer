@@ -63,11 +63,11 @@ public final class HlsMediaPlaylist extends HlsPlaylist {
   public static final String ENCRYPTION_METHOD_AES_128 = "AES-128";
 
   public final int mediaSequence;
-  public final int targetDurationSecs;
+  public int targetDurationSecs;
   public final int version;
   public final List<Segment> segments;
   public final boolean live;
-  public final long durationUs;
+  public  long durationUs;
 
   public HlsMediaPlaylist(String baseUri, int mediaSequence, int targetDurationSecs, int version,
       boolean live, List<Segment> segments) {

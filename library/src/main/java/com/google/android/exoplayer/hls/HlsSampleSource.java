@@ -671,6 +671,11 @@ public final class HlsSampleSource implements SampleSource, SampleSourceReader, 
     currentLoadableExceptionCount = 0;
   }
 
+  public long getDuration()
+  {
+    return chunkSource.getDurationUs();
+  }
+
   private void maybeStartLoading() {
     long now = SystemClock.elapsedRealtime();
     long nextLoadPositionUs = getNextLoadPositionUs();
